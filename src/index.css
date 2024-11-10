@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes textReveal {
+  0% {
+    width: 0;
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    width: 100%;
+    opacity: 1; /* Fade in */
+  }
+}
+
+.animate-text-reveal {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid currentColor; /* Adds a typing effect */
+  animation: textReveal 5s ease-in-out forwards; /* Adjusted timing for a smoother effect */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly lower */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0); /* Slide up effect */
+  }
+  100% {
+    opacity: 0; /* Fades out */
+  }
+}
+
+.animate-fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
